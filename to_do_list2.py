@@ -3,8 +3,7 @@
 # 1. Add task
 # 2. View tasks
 # 3. Delete task
-# 4. Mark task as complete
-# 5. Quit
+# 4. Quit
 #This is my final to do list
 
 tasks = []
@@ -21,8 +20,11 @@ while True:
         tasks.append(task)
     elif choice == "2":
         print("TASKS")
-        for i, task in enumerate(tasks, 1):
-            print(f"{i}. {task}")
+        if not tasks:
+            print("Tasks not available")
+        else:
+            for i, task in enumerate(tasks, 1):
+                print(f"{i}. {task}")
     elif choice == "3":
         task = input("Enter a task to remove: ")
         if task in tasks:
@@ -30,7 +32,7 @@ while True:
         else:
             print("Task not found")
     elif choice == "4":
-        print("Thank you")
+        print("Bye!!")
         break
     else:
         print(f"{choice} is an invalid choice")
