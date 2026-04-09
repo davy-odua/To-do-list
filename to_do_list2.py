@@ -7,21 +7,21 @@
 # 5. Quit
 
 tasks = []
-print("-----MY TO-DO LIST-----")
-print("1. Add task")
-print("2. View tasks")
-print("3. Delete task")
-print("4. Quit")
-
 while True:
+    print("-----MY TO-DO LIST-----")
+    print("1. Add task")
+    print("2. View tasks")
+    print("3. Delete task")
+    print("4. Quit")
+
     choice = input("Enter your choice: ")
     if choice == "1":
-        task = input("Enter your task: ")
+        task = input("Enter your task: ").strip()
         tasks.append(task)
     elif choice == "2":
         print("TASKS")
-        for task in tasks:
-            print(f"{task}")
+        for i, task in enumerate(tasks, 1):
+            print(f"{i}. {task}")
     elif choice == "3":
         task = input("Enter a task to remove: ")
         if task in tasks:
