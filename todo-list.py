@@ -15,7 +15,8 @@ def to_do_list():
         print("3. Delete task")
         print("4. Quit")
 
-        choice = input("Enter your choice: ")
+        choice = input("Enter your choice: ") #USER CHOICE
+
         if choice == "1":
             task = input("Enter your task: ")
             tasks.append(task)
@@ -23,7 +24,7 @@ def to_do_list():
             print("TASKS")
             for task in tasks:
                 print(f"{task}")
-
+            return tasks
         elif choice == "3":
             task = input("Enter a task to remove: ")
             if task in tasks:
@@ -35,6 +36,8 @@ def to_do_list():
         else:
             print(f"{choice} is an invalid choice")
 
+
 to_do_list()
+
         
 
